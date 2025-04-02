@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam Price Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            width: 250px;
+            padding: 10px;
+            background-color: black;
+            color: limegreen;
+        }
+        h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 14px;
+            color: lightgreen;
+        }
+        input {
+            width: 80%;
+            padding: 5px;
+            margin: 5px 0;
+            text-align: center;
+            border: 1px solid limegreen;
+            background: black;
+            color: limegreen;
+        }
+        button {
+            padding: 5px 10px;
+            margin-top: 5px;
+            cursor: pointer;
+            background: limegreen;
+            border: none;
+            color: black;
+            font-weight: bold;
+        }
+        button:hover {
+            background: green;
+        }
+        select {
+            background-color: black;
+            color: limegreen;
+            border: 1px solid limegreen;
+            padding: 5px;
+            width: 80%;
+        }
+        .language-indicator {
+            margin-top: 10px;
+            font-size: 14px;
+            color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <h2>Steam BDT</h2>
+    <p>Converts Steam prices to ৳ using real-time exchange rates.</p>
+
+    <label for="exchangeRate">Custom Exchange Rate (1 USD = ? BDT):</label>
+    <input type="number" id="exchangeRate" placeholder="Enter rate" step="0.01">
+    <button id="saveRate">Save</button>
+    <button id="resetRate">API</button>
+
+    <p>
+        <label for="languageSelect">Select Language:</label>
+        <select id="languageSelect">
+            <option value="en">English</option>
+            <option value="bn">Bangla</option>
+        </select>
+    </p>
+
+    <p class="language-indicator" id="languageIndicator">Current Language: English</p>
+
+    <p><small>Approximate conversion. Your bank may charge differently.</small></p>
+
+    <p><small>Created by NRL Zarif</small></p>
+
+    <script src="popup.js"></script>
+</body>
+</html>
